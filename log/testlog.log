@@ -1,0 +1,22 @@
+2022-02-09 12:34:43,461 +0530 [main] INFO  (Logger.java:16) - --------Starting Chrome Driver-------
+2022-02-09 12:34:43,485 +0530 [main] INFO  (WebDriverManager.java:269) - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2022-02-09 12:34:43,486 +0530 [main] INFO  (WebDriverManager.java:271) - ====> http://tiny.cc/wdm-survey <====
+2022-02-09 12:34:44,085 +0530 [main] INFO  (WebDriverManager.java:571) - Using chromedriver 97.0.4692.71 (since Chrome 97 is installed in your machine)
+2022-02-09 12:34:44,100 +0530 [main] INFO  (WebDriverManager.java:615) - Exporting webdriver.chrome.driver as C:\Users\prashantchaudhary01\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-02-09 12:34:46,219 +0530 [main] INFO  (Logger.java:16) - ***********************  TC01_VerifySubstituteProductInformation Has Started Executing  **************************
+2022-02-09 12:34:46,238 +0530 [main] INFO  (Logger.java:16) - Launch ALM Portal Url
+2022-02-09 12:35:00,126 +0530 [main] INFO  (Logger.java:16) - Login with CustomerID:78263145
+2022-02-09 12:35:02,756 +0530 [main] INFO  (Logger.java:16) - Enter Password
+2022-02-09 12:35:09,105 +0530 [main] INFO  (Logger.java:16) - Login button clicked
+2022-02-09 12:35:13,261 +0530 [main] INFO  (Logger.java:16) - Validating that product is in aggregate list
+2022-02-09 12:36:31,828 +0530 [main] INFO  (Logger.java:16) - --------Starting Chrome Driver-------
+2022-02-09 12:36:31,855 +0530 [main] INFO  (WebDriverManager.java:269) - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2022-02-09 12:36:31,855 +0530 [main] INFO  (WebDriverManager.java:271) - ====> http://tiny.cc/wdm-survey <====
+2022-02-09 12:36:32,041 +0530 [main] INFO  (WebDriverManager.java:571) - Using chromedriver 97.0.4692.71 (since Chrome 97 is installed in your machine)
+2022-02-09 12:36:32,057 +0530 [main] INFO  (WebDriverManager.java:615) - Exporting webdriver.chrome.driver as C:\Users\prashantchaudhary01\.m2\repository\webdriver\chromedriver\win32\97.0.4692.71\chromedriver.exe
+2022-02-09 12:36:33,987 +0530 [main] INFO  (Logger.java:16) - ***********************  TC01_VerifyUserNotAbleToLoginWithInvalidCredentials Has Started Executing  **************************
+2022-02-09 12:36:34,006 +0530 [main] INFO  (Logger.java:16) - Launch ALM Portal Url
+2022-02-09 12:36:40,947 +0530 [main] INFO  (Logger.java:16) - Login with CustomerID:78263145
+2022-02-09 12:36:43,391 +0530 [main] INFO  (Logger.java:16) - Enter Password
+2022-02-09 12:36:46,911 +0530 [main] INFO  (Logger.java:16) - Login button clicked
+2022-02-09 12:36:47,070 +0530 [main] INFO  (Logger.java:23) - Testcase============== TC01_VerifyUserNotAbleToLoginWithInvalidCredentials ============has Passed Successfully
