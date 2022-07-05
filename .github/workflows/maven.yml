@@ -69,4 +69,4 @@ jobs:
     # Optional whether this connection use TLS (default is true if server_port is 465)
        secure: true
        html_body: file://mailer_file.html
-       attachments: ${{github.workspace}}/extentreport/screenshots/reportscreenshot.png
+       attachments: ${{github.workspace}}/extentreport/AutoCT_extentReport.html
