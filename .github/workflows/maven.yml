@@ -44,8 +44,7 @@ jobs:
           </table>
           </body>
           </html>
-    
-name: Upload a Build Artifact
+    - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
       with:
         name: Report
@@ -70,4 +69,4 @@ name: Upload a Build Artifact
     # Optional whether this connection use TLS (default is true if server_port is 465)
        secure: true
        html_body: file://mailer_file.html
-        attachments: ${{github.workspace}}/extentreport/screenshots/reportscreenshot.png
+       attachments: ${{github.workspace}}/extentreport/screenshots/reportscreenshot.png
