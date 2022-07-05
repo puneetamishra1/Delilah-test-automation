@@ -1,0 +1,73 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+name: Java CI with Maven
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build with Maven
+      run: mvn clean test -Dgroups=sanity -Dthreads=3
+    - name: Create html report file
+      uses: 1arp/create-a-file-action@0.2
+      with:
+        # Path from cwd where file is to be created
+        #path: ${{ github.workspace }}/extentreport
+        # The name of the file to be created with extention
+        file: mailer_file.html
+        # The content of the file
+        content: |
+          <html>
+          <head></head>
+          <body>
+          <table>
+          <tr>
+          <td>Hi Team,</td>
+          </tr> <tr>
+          <td>Please find below the execution summary</td>
+          </tr> <tr>
+          <td>
+          <a href="${{github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"> Click here to open Complete Report </a>
+          </td>
+          </tr><tr>
+          <td>&nbsp;</td>
+          </tr><tr>
+          <td><img src="cid:reportscreenshot.png" width="1100"></td>
+          </tr>
+          </table>
+          </body>
+          </html>
+    
+name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.0.0
+      with:
+        name: Report
+        path: ${{ github.workspace }}/extentreport/
+    - name: Send mail
+      uses: dawidd6/action-send-mail@v3
+      with:
+    # Required mail server address:
+       server_address: smtp.gmail.com
+    # Required mail server port:
+       server_port: 465
+    # Optional (recommended): mail server username:
+       username: automatesupplier1@gmail.com
+    # Optional (recommended) mail server password:
+       password: ocimlbijurthfbtm
+    # Required mail subject:
+       subject: Automation report
+    # Required recipients' addresses:
+       to: puneeta.mishra@nagarro.com
+    # Required sender full name (address can be skipped):
+       from: Metcash Automation team  <automatesupplier1@gmail.com>
+    # Optional whether this connection use TLS (default is true if server_port is 465)
+       secure: true
+       html_body: file://mailer_file.html
+        attachments: ${{github.workspace}}/extentreport/screenshots/reportscreenshot.png
