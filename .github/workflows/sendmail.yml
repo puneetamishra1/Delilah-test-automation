@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn clean test -Dgroups=smoke -Dthreads=3
+      run: mvn clean test -Dgroups=sanity -Dthreads=3
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
