@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn clean test -Dgroups=sanity -Dthreads=3
+      run: mvn clean test -Dgroups=smoke -Dthreads=3
     - name: Create html report file
       uses: 1arp/create-a-file-action@0.2
       with:
@@ -69,4 +69,4 @@ jobs:
     # Optional whether this connection use TLS (default is true if server_port is 465)
        secure: true
        html_body: file://mailer_file.html
-       attachments: ${{github.workspace}}/extentreport/AutoCT_extentReport.html
+       attachments: ${{github.workspace}}\extentreport\AutoCT_extentReport.html
